@@ -22,8 +22,28 @@ $(".time-block").each(function(index, timeBlock){
 var intager = $(".time-block").each(function(index, timeBlock){})
 
 //sets up the ability to change styles...
-var element = document.getElementById("hour-09");
-  element.classList.add("past");
+var element9 = document.getElementById("hour-09");
+  element9.classList.add("past");
+var element10 = document.getElementById("hour-10");
+  element10.classList.add("past");
+var element11 = document.getElementById("hour-11");
+  element11.classList.add("past");
+var element12 = document.getElementById("hour-12");
+  element12.classList.add("past");
+var element13 = document.getElementById("hour-13");
+  element13.classList.add("past");
+var element14 = document.getElementById("hour-14");
+element14.classList.add("past");
+var element15 = document.getElementById("hour-15");
+  element15.classList.add("past");
+var element16 = document.getElementById("hour-16");
+  element16.classList.add("past");
+var element17 = document.getElementById("hour-17");
+  element17.classList.add("past");
+
+
+
+
 
 //attempt to display time in a single number
 //var today = new Date();
@@ -54,15 +74,45 @@ console.log (currentHour);
 
 if (intager < currentHour) {
   $(this).addClass("past");
+  element9.classList.add("past");
+  element10.classList.add("past");
+  element11.classList.add("past");
+  element12.classList.add("past");
+  element13.classList.add("past");
+  element14.classList.add("past");
+  element15.classList.add("past");
+  element16.classList.add("past");
+  element17.classList.add("past");
 } 
 else if (intager === currentHour) {
   $(this).removeClass("past");
   $(this).addClass("present");
+  element9.classList.add("present");
+  element10.classList.add("present");
+  element11.classList.add("present");
+  element12.classList.add("present");
+  element13.classList.add("present");
+  element14.classList.add("present");
+  element15.classList.add("present");
+  element16.classList.add("present");
+  element17.classList.add("present");
 } 
 else {
   $(this).removeClass("past");
   $(this).removeClass("present");
   $(this).addClass("future");
+  element9.classList.add("future");
+  element10.classList.add("future");
+  element11.classList.add("future");
+  element12.classList.add("future");
+  element13.classList.add("future");
+  element14.classList.add("future");
+  element15.classList.add("future");
+  element16.classList.add("future");
+  element17.classList.add("future");
+
+
+
 }
 
 
