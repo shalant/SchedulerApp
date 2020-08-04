@@ -13,12 +13,24 @@ var update = function() {
 }
 setInterval(update, 1000);
 
+//this grabs the time-block number and displays it in the console log
 $(".time-block").each(function(index, timeBlock){
-    console.log('---I am the value at index' + index + 'of the timeBlocks ---' )
-    console.log(timeBlock.id)
+    console.log(timeBlock.id.slice(5))
 })
 
+//this grabs the time-block number for use later...
+var intager = $(".time-block").each(function(index, timeBlock){})
 
+//sets up the ability to change styles...
+var element = document.getElementById("hour-09");
+  element.classList.add("past");
+
+//attempt to display time in a single number
+//var today = new Date();
+//var hour = today.getHours();
+
+var currentHour = moment().hours();
+console.log (currentHour);
 
 //some function to list all the divs with id "hour-n"
 //getElementById
@@ -36,14 +48,32 @@ $(".time-block").each(function(index, timeBlock){
 //(FROM FRANK)moment js to take Date.now and format it so that it returns the h (hour)
 
 
+//if (currentHour < intager) {
+  //  timeblock.classlist.add()
+//}
 
-//if ({div.substringythingy} < 10) {
-  
+if (intager < currentHour) {
+  $(this).addClass("past");
+} 
+else if (intager === currentHour) {
+  $(this).removeClass("past");
+  $(this).addClass("present");
+} 
+else {
+  $(this).removeClass("past");
+  $(this).removeClass("present");
+  $(this).addClass("future");
+}
+
+
+//if (intager < currentHour) {
+  //timeblock.classlist.add("past")}
+//}
     //timeblock.classList.add('past')
     //we want change it to be green
 //    greeting = "Good morning";
 //  } else if (time < 20) {
-    timeblock.classlist.add('present')
+ //   timeblock.classlist.add('present')
 //    greeting = "Good day";
 //  } else  {
 
@@ -54,6 +84,6 @@ $(".time-block").each(function(index, timeBlock){
 
 //localstorage...
 //localStorage.setItem('CalendarTasks', JSON.stringify(//how to format the text entry so it's an array?))
-
+//localStorage.setItem('col-md-10 description', description.innerHTML);
 
 //how to save the entry in column 2? think of this in terms of local storage, take the object out of LS, use JSON.stringify
