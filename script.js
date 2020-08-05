@@ -42,9 +42,6 @@ var element17 = document.getElementById("hour-17");
   element17.classList.add("past");
 
 
-
-
-
 //attempt to display time in a single number
 //var today = new Date();
 //var hour = today.getHours();
@@ -72,6 +69,7 @@ console.log (currentHour);
   //  timeblock.classlist.add()
 //}
 
+//intager is the timeblock, currentHour is the present time as a single number
 if (intager < currentHour) {
   $(this).addClass("past");
   element9.classList.add("past");
